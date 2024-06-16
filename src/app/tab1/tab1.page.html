@@ -1,17 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div>
+    <ion-segment [(ngModel)]="categoriaSeleccionada">
+      <ion-segment-button value="colores"><ion-icon name="color-palette-outline"></ion-icon></ion-segment-button>
+      <ion-segment-button value="numeros" style="font-size: 18px;">123</ion-segment-button>
+      <ion-segment-button value="animales"><ion-icon name="paw-outline"></ion-icon></ion-segment-button>
+    </ion-segment>
+    <app-botones [idiomaSeleccionado]="idiomaSeleccionado" [categoriaSeleccionada]="categoriaSeleccionada"></app-botones>
+    <div class="idiomas">
+      <ion-fab-button (click)="seleccionarIdioma('español')" [ngClass]="{'boton-seleccionado': botonSeleccionado === 'español'}">
+        <img src="../../assets/bandera españa.png" alt="" class="imagen-botones">
+      </ion-fab-button>
+      <ion-fab-button (click)="seleccionarIdioma('ingles')" [ngClass]="{'boton-seleccionado': botonSeleccionado === 'ingles'}">
+        <img src="../../assets/bandera inglatera.png" alt="" class="imagen-botones">
+      </ion-fab-button>
+      <ion-fab-button (click)="seleccionarIdioma('portugues')" [ngClass]="{'boton-seleccionado': botonSeleccionado === 'portugues'}">
+        <img src="../../assets/bandera portugal.png" alt="" class="imagen-botones">
+      </ion-fab-button>
+    </div>
+    <div class="logout">
+      <ion-fab-button (click)="logout()"><ion-icon name="log-out-outline"></ion-icon></ion-fab-button>
+    </div>
+  </div> 
 </ion-content>
+

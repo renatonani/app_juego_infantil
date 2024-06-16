@@ -1,0 +1,35 @@
+/* app-botones.component.css */
+// .botones {
+//   display: flex;
+//   height: 100vh; /* Ocupa toda la altura de la ventana */
+// }
+
+.categorias {
+  flex: 1; /* Esto hará que las categorías ocupen el espacio disponible a la izquierda */
+  display: flex;
+  flex-direction: column; /* Coloca las categorías verticalmente */
+  align-items: flex-end; /* Alinea las categorías en el borde derecho */
+  //height: 90%; 
+  height: 93vh;
+}
+
+.boton-imagen {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 100%; /* Ocupa toda la altura del contenedor */  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Elimina el relleno predeterminado del botón */ 
+}
+
+.imagen-botones {
+  width: 30%;
+  height: 100%;
+  object-fit: contain; /* Utiliza 'contain' para ajustar la imagen manteniendo su relación de aspecto */
+}
+
+ion-button{
+  --background: linear-gradient(0deg, #ff7070 0%, #ff5959 100%);
+    box-shadow: 5px 5px 10px 1px #000000;
+}
+

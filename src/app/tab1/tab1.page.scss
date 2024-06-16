@@ -1,0 +1,57 @@
+  .idiomas {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    flex-direction: column;
+    z-index: 2; /* Asegura que estén en la parte superior */    
+    display: flex;
+    gap: 15px; /* Agrega un espacio de 15px entre los botones en la columna */
+  } 
+
+  .logout{
+    z-index: 2;   
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 15px;
+    margin-top: 80px;
+    ion-fab-button{
+      --background: rgb(173, 16, 16);
+    }
+  }
+  
+  .categorias {
+    /* Elimina flex: 1; para que las categorías no ocupen espacio extra */
+    display: flex;
+    flex-direction: column; /* Colocar las categorías verticalmente */
+    align-items: flex-end; /* Alinea las categorías en el borde derecho */
+    ion-fab-button{
+        --background:#ffffff;
+    }
+  }
+  .imagen-botones {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegurará que la imagen se ajuste al botón sin distorsionarse */      
+  }
+
+  .boton{
+    margin: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 2;     
+  }
+
+  ion-content{
+    height: 100%;
+  }
+
+  .boton-seleccionado {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    transition: transform 0.3s ease-in-out; /* Transición suave durante 0.3 segundos */
+  }
+  
+  
+  

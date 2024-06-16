@@ -1,0 +1,8 @@
+<!-- app-botones.component.html -->
+<div class="botones">
+  <div class="categorias">
+    <ion-button *ngFor="let i of range(cantidadDeImagenes)"  (click)="reproducirSonido(i)" class="boton-imagen">
+      <ion-img class="imagen-botones" [src]="'../../assets/' + categoriaSeleccionada + '-' + i + '.png'"></ion-img>
+    </ion-button>
+  </div>
+</div>
